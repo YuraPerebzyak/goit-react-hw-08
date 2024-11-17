@@ -14,21 +14,74 @@
   color: #333;
 }
 
+.edit_title {
+  color: darkblue;
+  font-size: 24px;
+  font-weight: 700;
+}
+.input {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  background-color: #adcdf2;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.input::placeholder {
+  font-size: 12px;
+}
+
 .icon {
   margin-right: 8px;
   color: #5a9bd3;
 }
-
-.btn {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  background-color: #5a9bd3;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.icon_del {
+  margin-right: 8px;
+  color: #650000;
 }
 
+.modalActions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_del,
+.btn_cancel {
+  background-color: #ff4d4f;
+}
+
+.btn_save {
+  background-color: chartreuse;
+}
+
+.btn_del:hover {
+  background-color: #cc3d3d;
+}
 .btn:hover {
-  background-color: #4a8bb0;
+  background-color: #0056b3;
+}
+
+.btn:active {
+  background-color: #003d80;
 }

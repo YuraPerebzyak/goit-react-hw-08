@@ -2,8 +2,8 @@ import { createSelector, createSlice } from "@reduxjs/toolkit";
 import {
   addContact,
   deleteContact,
-  editContact,
   fetchContacts,
+  updateContact,
 } from "../contacts/operations";
 import { selectNameFilter } from "./../filters/selectors";
 
@@ -53,15 +53,15 @@ const contactsSlice = createSlice({
       })
       .addCase(addContact.rejected, handleRejected)
 
-      .addCase(editContact.pending, handlePending)
-      .addCase(editContact.fulfilled, (state, action) => {
+      .addCase(updateContact.pending, handlePending)
+      .addCase(updateContact.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
         state.items = state.items.map((item) =>
           item.id === action.payload.id ? action.payload : item
         );
       })
-      .addCase(editContact.rejected, handleRejected)
+      .addCase(updateContact.rejected, handleRejected)
 
       .addCase(deleteContact.pending, handlePending)
       .addCase(deleteContact.fulfilled, (state, action) => {

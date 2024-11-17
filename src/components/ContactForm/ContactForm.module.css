@@ -51,3 +51,7 @@
 .btn:hover {
   background-color: #4a8bb0;
 }
+
+.Toaster {
+  z-index: 99999 !important;
+}
